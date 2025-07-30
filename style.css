@@ -1,0 +1,54 @@
+/* Minimal academic theme inspired by simple personal pages */
+:root {
+  --bg: #ffffff;
+  --text: #1a1a1a;
+  --muted: #6b7280;
+  --link: #1f4fff;
+  --accent: #0ea5e9;
+  --card: #f8fafc;
+  --border: #e5e7eb;
+  --maxw: 820px;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Inter, Helvetica, Arial, sans-serif; line-height: 1.6; }
+
+.container { max-width: var(--maxw); margin: 0 auto; padding: 0 16px; }
+
+.site-header {
+  position: sticky; top: 0; z-index: 10;
+  background: rgba(255,255,255,0.8); backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--border);
+}
+.site-title { margin: 0; font-size: 20px; }
+.site-title a { color: var(--text); text-decoration: none; }
+.site-header .container { display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; }
+.site-nav a { margin-left: 14px; text-decoration: none; color: var(--muted); font-weight: 500; }
+.site-nav a:hover { color: var(--text); }
+
+.intro { display: grid; grid-template-columns: 120px 1fr; gap: 16px; align-items: center; }
+.headshot { width: 120px; height: 120px; border-radius: 8px; object-fit: cover; border: 1px solid var(--border); background: #ddd; }
+
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 16px; margin: 16px 0 24px; }
+.lead { margin: 0 0 8px; }
+
+h2 { margin-top: 36px; border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+a { color: var(--link); }
+a:hover { text-decoration: underline; }
+
+.bullets { padding-left: 20px; }
+.pub { padding: 10px 0; border-bottom: 1px dashed var(--border); }
+.pub:last-child { border-bottom: none; }
+.pub-title { font-weight: 600; }
+.pub-authors { color: var(--muted); }
+.pub-venue { color: var(--muted); font-style: italic; }
+.pub-links a { margin-right: 10px; }
+
+.site-footer { border-top: 1px solid var(--border); margin-top: 40px; }
+.site-footer .container { padding: 16px; color: var(--muted); font-size: 14px; }
+
+@media (max-width: 640px) {
+  .intro { grid-template-columns: 80px 1fr; }
+  .headshot { width: 80px; height: 80px; }
+  .site-nav { display: none; } /* keep header minimal on mobile */
+}
