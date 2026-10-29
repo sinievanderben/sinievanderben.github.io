@@ -5,104 +5,224 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sinie van der Ben</title>
   <meta name="description" content="Personal academic website of Sinie van der Ben, PhD candidate in mechanistic interpretability at ETH Zurich." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <h1 class="site-title"><a href="#home">Sinie van der Ben</a></h1>
+  <div class="sheet">
+    <header class="site-header">
       <nav class="site-nav" aria-label="Primary">
         <a href="#research">Research</a>
         <a href="#publications">Publications</a>
-        <a href="#cv">CV</a>
+        <a href="#open-source">Open Source</a>
+      </nav>
+      <a href="#home" class="site-title">Sinie van der Ben</a>
+      <nav class="site-nav site-nav-right" aria-label="Secondary">
+        <a href="#teaching">Teaching</a>
+        <a href="#writing">Writing</a>
+        <a href="cv.pdf">CV</a>
         <a href="#contact">Contact</a>
       </nav>
-    </div>
-  </header>
+    </header>
 
-  <main id="home" class="container">
-    <section class="intro card">
-      <img src="headshot.jpg" alt="Headshot of Sinie van der Ben" class="headshot" />
-      <div>
-        <p class="lead"><strong>Sinie van der Ben</strong> — PhD Candidate<br>
-        <a href="https://ivia.ch" target="_blank" rel="noopener">IVIA Lab</a>, 
-        <a href="https://inf.ethz.ch" target="_blank" rel="noopener">ETH Zurich</a></p>
-        <p>I am a PhD student in mechanistic interpretability, exploring how models store and organize knowledge, how that knowledge can be read out and edited, and whether representations are consistent across architectures and training runs.</p>
-        <p>I will attend the ICML Mechanistic Interpretability workshop and present two posters.</p>
-        <p>
-          <a href="mailto:vandersi@ethz.ch">vandersi@ethz.ch</a> · 
-          <a href="https://scholar.google.nl/citations?user=4inwWnAAAAAJ&hl=nl&oi=sra" target="_blank" rel="noopener">Google Scholar</a> · 
-          <a href="https://github.com/sinievanderben" target="_blank" rel="noopener">GitHub</a>
-        </p>
-      </div>
-    </section>
-
-    <section id="research">
-      <h2>Research</h2>
-      <p>I am a PhD student in mechanistic interpretability, working on how models store and organize what they know. My research asks where knowledge lives inside a model, how it can be read out and edited, and whether representations are consistent and universal across architectures and training runs. A follow up question is then, how can we manipulate this knowledge?</p>
-      <p>Another interest is how individual features relate to one another: whether they compose, form hierarchies, and connect into the circuits that drive a model's behavior. I am exploring techniques to move from describing what a model represents toward predicting what it will compute.</p>
-      <p>I also have a general interest in health and medicine, so if you have a strong interpretability project in these directions, I’d love to hear about it.</p>
-      <ul class="bullets">
-        <li><strong>Representation readout, editing, and universality</strong></li>
-        <li><strong>Feature composition, hierarchies, and behavioral circuits</strong></li>
-        <li><strong>Circuit explanation</strong></li>
-      </ul>
-    </section>
-
-    <section id="publications">
-      <h2>Publications</h2>
-      <p>Selected recent work. See my <a href="https://scholar.google.nl/citations?user=4inwWnAAAAAJ&hl=nl&oi=sra" target="_blank" rel="noopener">Google Scholar profile</a> for the full list.</p>
-
-      <div class="pub">
-        <div class="pub-title">Explainable Mapper: Charting LLM Embedding Spaces Using Perturbation-Based Explanation and Verification Agents</div>
-        <div class="pub-authors">Xinyuan Yan, Rita Sevastjanova, <strong>Sinie van der Ben</strong>, Mennatallah El-Assady, Bei Wang</div>
-        <div class="pub-links">
-          <a href="https://arxiv.org/abs/2507.18607">Paper</a>
+    <main id="home">
+      <section class="intro">
+        <figure class="cover">
+          <img src="headshot.jpg" alt="Headshot of Sinie van der Ben" />
+          <figcaption>PhD · ETH Zurich</figcaption>
+        </figure>
+        <div class="intro-text">
+          <p class="kicker">PhD Candidate · <a href="https://ivia.ch" target="_blank" rel="noopener">IVIA Lab</a>, <a href="https://inf.ethz.ch" target="_blank" rel="noopener">ETH Zurich</a></p>
+          <h1 class="headline">How do concepts live inside language models?</h1>
+          <p>I am a PhD student in mechanistic interpretability at ETH Zürich (IVIA Lab). I study how concepts are represented inside VLMs, and how reliably we can observe them, manipulate them and use them. I also work on how much our interpretability measurements can be trusted in the first place.</p>
+          <ul class="now">
+            <li class="now-label">Now</li>
+            <li>TA for <a href="https://ai.ethz.ch/education/courses/large-scale-ai-engineering.html" target="_blank" rel="noopener">Large Scale AI Engineering</a> at ETH Zurich</li>
+            <li>Hosting a monthly interpretability standup at the <a href="https://ai.ethz.ch" target="_blank" rel="noopener">ETH AI Center</a></li>
+            <li>Presented two posters at the ICML 2026 Mechanistic Interpretability Workshop</li>
+          </ul>
+          <p class="links">
+            <a href="mailto:vandersi@ethz.ch">vandersi@ethz.ch</a>
+            <a href="https://scholar.google.nl/citations?user=4inwWnAAAAAJ&hl=nl&oi=sra" target="_blank" rel="noopener">Google Scholar</a>
+            <a href="https://github.com/sinievanderben" target="_blank" rel="noopener">GitHub</a>
+          </p>
         </div>
-      </div>
-      <div class="pub">
-        <div class="pub-title">Where Do Models Find Happiness? Emotion Vectors in Open-Source LLMs</div>
-        <div class="pub-authors">Sinie van der Ben, Raphaël Baur, Yannick Metz, Mennatallah El-Assady</div>
-        <div class="pub-note">Accepted as virtual poster, Mechanistic Interpretability Workshop, ICML 2026</div>
-        <div class="pub-links">
-          <a href="https://openreview.net/forum?id=fCM2CWAwFJ">OpenReview</a>
+      </section>
+
+      <section id="research">
+        <h2><span class="num">01</span> Research</h2>
+        <div class="section-body">
+          <p>My research asks how a concept, such as an emotion, is represented inside a language model, and whether what we read out of it actually matters for what the model does. I organise this around three questions:</p>
+          <ul class="questions">
+            <li>
+              <span class="q-label">Observe</span>
+              <span class="q-text">What is the geometry of a concept in the model?</span>
+              <span class="q-note">Emotion representations in open-weight LLMs</span>
+            </li>
+            <li>
+              <span class="q-label">Manipulate</span>
+              <span class="q-text">Can we predict which directions are steerable before steering?</span>
+              <span class="q-note">Steering and covariance structure</span>
+            </li>
+            <li>
+              <span class="q-label">Use</span>
+              <span class="q-text">Does an internal state drive behaviour, or only the expressed output?</span>
+              <span class="q-note">Internal vs. external emotion</span>
+            </li>
+          </ul>
+          <h3>Why this matters for AI safety</h3>
+          <p>As language models take on more consequential tasks, we need to check what is happening inside them, not only what they say. If we can locate a concept, show that it causally drives behaviour, and know how far our measurements can be trusted, we get tools to detect and correct unwanted internal states before they surface in a model's output. Emotions are a useful test case: they are abstract, they appear across models, and what a model expresses can differ from what it represents internally. That gap is exactly what oversight needs to be able to see.</p>
         </div>
-      </div>
-      <div class="pub">
-        <div class="pub-title">Building Fast, Evaluating Slow: Pipeline Choices Dominate Autointerpretability Score Variance</div>
-        <div class="pub-authors">Sinie van der Ben, Neele Roch, Anna Hedström, Mennatallah El-Assady</div>
-        <div class="pub-note">Accepted as poster, Mechanistic Interpretability Workshop, ICML 2026</div>
-        <div class="pub-links">
-          <a href="https://openreview.net/forum?id=HMUSKNJO6R">OpenReview</a>
+      </section>
+
+      <section id="publications" class="band">
+        <h2><span class="num">02</span> Publications</h2>
+        <div class="section-body">
+          <p>Selected recent work. See my <a href="https://scholar.google.nl/citations?user=4inwWnAAAAAJ&hl=nl&oi=sra" target="_blank" rel="noopener">Google Scholar profile</a> for the full list.</p>
+
+          <article class="pub">
+            <div class="pub-year">2026</div>
+            <div>
+              <div class="pub-title">Where Do Models Find Happiness? Emotion Vectors in Open-Source LLMs</div>
+              <div class="pub-authors"><strong>Sinie van der Ben</strong>, Raphaël Baur, Yannick Metz, Mennatallah El-Assady</div>
+              <div class="pub-note">Accepted as virtual poster, Mechanistic Interpretability Workshop, ICML 2026</div>
+              <div class="pub-links">
+                <a href="https://openreview.net/forum?id=fCM2CWAwFJ" target="_blank" rel="noopener">OpenReview</a>
+              </div>
+            </div>
+          </article>
+          <article class="pub">
+            <div class="pub-year">2026</div>
+            <div>
+              <div class="pub-title">Building Fast, Evaluating Slow: Pipeline Choices Dominate Autointerpretability Score Variance</div>
+              <div class="pub-authors"><strong>Sinie van der Ben</strong>, Neele Roch, Anna Hedström, Mennatallah El-Assady</div>
+              <div class="pub-note">Accepted as poster, Mechanistic Interpretability Workshop, ICML 2026</div>
+              <div class="pub-links">
+                <a href="https://openreview.net/forum?id=HMUSKNJO6R" target="_blank" rel="noopener">OpenReview</a>
+              </div>
+            </div>
+          </article>
+          <article class="pub">
+            <div class="pub-year">2026</div>
+            <div>
+              <div class="pub-title">Explainable Mapper: Charting LLM Embedding Spaces Using Perturbation-Based Explanation and Verification Agents</div>
+              <div class="pub-authors">Xinyuan Yan, Rita Sevastjanova, <strong>Sinie van der Ben</strong>, Mennatallah El-Assady, Bei Wang</div>
+              <div class="pub-note">IEEE Transactions on Visualization and Computer Graphics (Proc. IEEE VIS 2026)</div>
+              <div class="pub-links">
+                <a href="https://arxiv.org/abs/2507.18607" target="_blank" rel="noopener">arXiv</a>
+              </div>
+            </div>
+          </article>
+          <article class="pub">
+            <div class="pub-year">2026</div>
+            <div>
+              <div class="pub-title">Investigating Assistant Bias in LLM User Simulators Using a Role Vector</div>
+              <div class="pub-authors">Daeheon Jeong, Yoonjoo Lee, Eugene Choi, <strong>Sinie van der Ben</strong>, Juho Kim</div>
+              <div class="pub-note">EMNLP 2026</div>
+              <div class="pub-links">
+                <a href="https://arxiv.org/abs/2609.00608" target="_blank" rel="noopener">arXiv</a>
+              </div>
+            </div>
+          </article>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="courses">
-      <h2>Courses</h2>
-      <p>Here are some courses I have taken that are relevant to my research:</p>
-      <ul class="bullets">
-        <li><a href="https://ai.ethz.ch/education/courses/large-scale-ai-engineering.html" target="_blank" rel="noopener">Large Scale AI Engineering FS25 (ETH Zurich)</a></li>
-      </ul>
-    </section>
+      <section id="open-source">
+        <h2><span class="num">03</span> Open Source</h2>
+        <div class="section-body">
+          <article class="pub">
+            <div class="pub-year">2026</div>
+            <div>
+              <div class="pub-title">TransformerLens: Apertus model support with xIELU activation</div>
+              <div class="pub-authors">Added support for the <a href="https://huggingface.co/swiss-ai" target="_blank" rel="noopener">Apertus</a> models in <a href="https://github.com/TransformerLensOrg/TransformerLens" target="_blank" rel="noopener">TransformerLens</a>, including a trainable xIELU activation and a weight converter that loads its learned parameters.</div>
+              <div class="pub-note">Merged March 2026</div>
+              <div class="pub-links">
+                <a href="https://github.com/TransformerLensOrg/TransformerLens/pull/1197" target="_blank" rel="noopener">Pull request #1197</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
 
-    <section id="cv">
-      <h2>CV</h2>
-      <p><a href="cv.pdf">Download CV (PDF)</a></p>
-    </section>
+      <section id="teaching">
+        <h2><span class="num">04</span> Teaching &amp; Community</h2>
+        <div class="section-body">
+          <article class="pub">
+            <div class="pub-year">Now</div>
+            <div>
+              <div class="pub-title">Teaching assistant, Large Scale AI Engineering (HS26)</div>
+              <div class="pub-authors">ETH Zurich</div>
+              <div class="pub-links">
+                <a href="https://ai.ethz.ch/education/courses/large-scale-ai-engineering.html" target="_blank" rel="noopener">Course page</a>
+              </div>
+            </div>
+          </article>
+          <article class="pub">
+            <div class="pub-year">Monthly</div>
+            <div>
+              <div class="pub-title">Interpretability standup</div>
+              <div class="pub-authors">I host a monthly Interpretability × Apertus standup at the ETH AI Center, open to anyone working on (or curious about) understanding model internals.</div>
+              <div class="pub-links">
+                <a href="https://ai.ethz.ch" target="_blank" rel="noopener">ETH AI Center</a>
+              </div>
+            </div>
+          </article>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:vandersi@ethz.ch">vandersi@ethz.ch</a></p>
-    </section>
+          <h3>Relevant courses taken</h3>
+          <ul class="topics">
+            <li><a href="https://ai.ethz.ch/education/courses/large-scale-ai-engineering.html" target="_blank" rel="noopener">Large Scale AI Engineering HS25 (ETH Zurich)</a></li>
+          </ul>
+        </div>
+      </section>
 
-  </main>
+      <section id="writing">
+        <h2><span class="num">05</span> Writing</h2>
+        <div class="section-body">
+          <article class="pub">
+            <div class="pub-year">2026</div>
+            <div>
+              <div class="pub-title">Where Do Models Find Happiness?</div>
+              <div class="pub-authors">A research post on Apertus Claritas explaining the emotion-vectors paper: replicating emotion-vector findings on open-source models, and how much the results depend on the extraction corpus and layer.</div>
+              <div class="pub-links">
+                <a href="https://apertus-claritas.org/artifacts/where-do-models-find-happiness" target="_blank" rel="noopener">Read on Apertus Claritas</a>
+              </div>
+            </div>
+          </article>
+          <article class="pub">
+            <div class="pub-year">2021</div>
+            <div>
+              <div class="pub-title">Visualising large embedding spaces</div>
+              <div class="pub-authors">Two posts for the PROVEE project on progressively visualising high-dimensional embeddings, letting you watch an embedding space form rather than only see its final projection.</div>
+              <div class="pub-links">
+                <a href="https://medium.com/provee/incremental-visualization-of-data-embeddings-ee1525454050" target="_blank" rel="noopener">Incremental visualization of data embeddings</a>
+                <a href="https://medium.com/provee/visualizing-large-embedding-spaces-provee-db4caed9f17d" target="_blank" rel="noopener">Visualizing large embedding spaces</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; <span id="year"></span> Sinie van der Ben · <a href="https://github.com/sinievanderben/sinievanderben.github.io">Source</a></p>
-    </div>
-  </footer>
+      <section id="contact" class="band">
+        <h2><span class="num">06</span> Contact</h2>
+        <div class="section-body">
+          <p class="big-link"><a href="mailto:vandersi@ethz.ch">vandersi@ethz.ch</a></p>
+          <p class="links">
+            <a href="cv.pdf">Download CV (PDF)</a>
+            <a href="https://scholar.google.nl/citations?user=4inwWnAAAAAJ&hl=nl&oi=sra" target="_blank" rel="noopener">Google Scholar</a>
+            <a href="https://github.com/sinievanderben" target="_blank" rel="noopener">GitHub</a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span class="footer-year" id="year"></span>
+      <span>Sinie van der Ben · <a href="https://github.com/sinievanderben/sinievanderben.github.io">Source</a></span>
+      <a href="#home" class="footer-top">Back to top ↑</a>
+    </footer>
+  </div>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
